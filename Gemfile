@@ -4,7 +4,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+group :production do
+  gem 'pg'
+end
+group :develpment, :test do
+  gem 'sqlite3'
+end
 
 gem 'bootstrap-sass', '2.1'
 
