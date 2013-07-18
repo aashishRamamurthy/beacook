@@ -10,8 +10,8 @@ gem 'rails', '4.0.0'
 group :production do
   gem 'pg'
 end
-group :develpment, :test do
-  gem 'sqlite3'
+group :development, :test do
+#  gem 'sqlite3'
 end
 
 gem 'bootstrap-sass', '2.1'
@@ -37,12 +37,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'hirb'
-
-# group :doc do
-#   # bundle exec rake doc:rails generates the API under doc/api.
-#   gem 'sdoc', require: false
-# end
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
