@@ -1,0 +1,31 @@
+<div class="Ingredients list">
+	<h2> Listing all the ingredients </h2><br />
+
+
+	<tr>
+		<th>&nbsp;</th>
+		<th>Ingredient_id</th>
+		<th>Name</th>
+	</tr><br /><br />
+
+
+	<% @ingredients.each do |i| %>
+	<tr>
+		<td><%= i.id %></td>
+		<td><%= i.Name %></td>
+		<td class="actions">
+			<%= link_to("Show",{:action => 'show',:id => i.id},:class => 'action show') %>
+			<%= link_to("Edit",{:action => 'edit',:id => i.id}, :class => 'action edit') %>
+			<%= link_to("Delete",{:action => 'destroy',:id => i.id}, :method => :delete, data: {confirm: 'Are You sure?'}, :class => 'action delete') %>
+		</td>	
+
+	</tr><br /><br />
+
+	<% end %>
+
+	<%= link_to("Insert new ingredients","/ingredients/new") %><br />
+
+	<%= link_to("Go back","/recipes") %>
+</div>	
+
+

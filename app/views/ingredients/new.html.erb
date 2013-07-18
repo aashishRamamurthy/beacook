@@ -1,0 +1,19 @@
+<%= link_to("<<Back to all ingredients","/ingredients/list")%>
+<div class="Ingredients show">
+	<h2>Give ingredient </h2>
+
+  <%= form_for(:ingredients, :url => {:action => 'create'}) do |i| %>
+	<table summary="Ingredients detail view">
+	  <tr>
+	  	<th>Name</th>
+	  	<td><%= i.text_field(:Name) %></td>
+	  </tr>	
+
+	  <tr>
+	  	<td><%= i.submit("Create ingredient") %></td>
+	  </tr>	
+
+	</table>  
+
+<% end %>
+</div>

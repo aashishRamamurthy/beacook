@@ -1,0 +1,27 @@
+@import "bootstrap";
+
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 0x;
+  background-color:#b0c4de;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+

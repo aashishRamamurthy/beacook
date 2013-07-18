@@ -1,0 +1,39 @@
+<%= link_to("<<Back to list","/recipe_ingredients/list")%>
+<div class="Ingredient and recipe show">
+	<h2>Insert recipe and ingredient details</h2>
+
+  <%= form_for(:recipe_ingredients, :url => {:action => 'create'}) do |f| %>
+	<table summary="Recipe detail view">
+	  <tr>
+	  	<th>Recipe id</th>
+	  	<td><%=f.text_field(:recipes_id) %></td>
+	  </tr>
+
+	  <tr>
+	  	<th>Ingredient id</th>
+	  	<td><%= f.text_field(:ingredients_id) %></td>
+	  </tr>	
+
+	  <tr>
+	  	<th>Name</th>
+	  	<td><%= f.text_field(:Name) %></td>
+	  </tr>	
+
+	  <tr>
+	  	<th>Amount needed</th>
+	  	<td><%= f.text_field(:Amount_needed) %></td>
+	  </tr>	
+
+	   <tr>
+	  	<th>Priority</th>
+	  	<td><%= f.text_field(:Priority) %></td>
+	  </tr>	
+
+	  <tr>
+	  	<td><%= f.submit("Create detail") %></td>
+	  </tr>	
+
+	</table>  
+
+<% end %>
+</div>

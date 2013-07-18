@@ -1,0 +1,39 @@
+<%= link_to("<<Back to all recipes","/recipes/list")%>
+<div class="Recipe show">
+	<h2>Insert recipe </h2>
+
+  <%= form_for(:recipes, :url => {:action => 'create'}) do |f| %>
+	<table summary="Recipe detail view">
+	  <tr>
+	  	<th>Name</th>
+	  	<td><%=f.text_field(:Name) %></td>
+	  </tr>
+
+	  <tr>
+	  	<th>Region</th>
+	  	<td><%= f.text_field(:Region) %></td>
+	  </tr>	
+
+	  <tr>
+	  	<th>Time_to_cook</th>
+	  	<td><%= f.text_field(:Time_to_cook) %></td>
+	  </tr>	
+
+	  <tr>
+	  	<th>Type</th>
+	  	<td><%= f.text_field(:Type) %></td>
+	  </tr>	
+
+	   <tr>
+	  	<th>Ingredients_needed</th>
+	  	<td><%= f.text_field(:Ingredients_needed) %></td>
+	  </tr>	
+
+	  <tr>
+	  	<td><%= f.submit("Create recipe") %></td>
+	  </tr>	
+
+	</table>  
+
+<% end %>
+</div>

@@ -1,0 +1,55 @@
+<%= link_to("<<Back to home","/recipes")%>
+<div class="Ingredients show">
+	<h2>Input the ingredients</h2>
+
+  <%= form_for :ingredients , :url => recipes_receive_path do |i| %>
+	<table summary="Give the ingredients">
+	  <tr>
+	  	<th>Ingredient 1</th>
+	  	<td><%=i.text_field(:ing1) %></td>
+	  </tr>
+	  <tr>
+	  	<th>Ingredient 2</th>
+	  	<td><%=i.text_field(:ing2) %></td>
+	  </tr>
+	  <tr>
+	  	<th>Ingredient 3</th>
+	  	<td><%=i.text_field(:ing3) %></td>
+	  </tr>
+	  <tr>
+	  	<th>Ingredient 4</th>
+	  	<td><%=i.text_field(:ing4) %></td>
+	  </tr>
+	  <tr>
+	  	<th>Ingredient 5</th>
+	  	<td><%=i.text_field(:ing5) %></td>
+	  </tr>
+	  <tr>
+	  	<th>Ingredient 6</th>
+	  	<td><%=i.text_field(:ing6) %></td>
+	  </tr>
+	  <tr>
+	  	<th>Ingredient 7</th>
+	  	<td><%=i.text_field(:ing7) %></td>
+	  </tr>
+	  <tr>
+	  	<th>Ingredient 8</th>
+	  	<td><%=i.text_field(:ing8) %></td>
+	  </tr>
+	  <tr>
+	  	<th>Ingredient 9</th>
+	  	<td><%=i.text_field(:ing9) %></td>
+	  </tr>
+	  <tr>
+	  	<th>Ingredient 10</th>
+	  	<td><%=i.text_field(:ing10) %></td>
+	  </tr>
+
+	  <tr>
+	  	<td><%= i.submit("Find recipes") %></td>
+	  </tr>	
+
+	</table>  
+
+<% end %>
+</div>

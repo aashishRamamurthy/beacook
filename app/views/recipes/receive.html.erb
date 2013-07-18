@@ -1,0 +1,25 @@
+<div>
+		<h2>Given ingredients are</h2>
+
+		<p>
+
+			<% @ing.each do |i| %>
+				<%= i %>
+			<% end %>	
+
+		</p>
+
+ 		<h2>Recipes which can be cooked are</h2>
+
+		<p>
+			<% @recipes.each do |key,value| %>
+   			<%= "#{value}" %>	
+   			<td class="actions">
+				<%= link_to("Show",{:action => 'show',:id => key},:class => 'action show') %>
+			</td>		
+		</p>
+
+ 	<% end %>
+</div>	
+
+<%= link_to("<<Give other ingredients","/recipes/give")%>

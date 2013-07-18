@@ -1,0 +1,26 @@
+ Recipes.find_by_sql("SELECT r.*,i.*
+  from Recipes r,Ingredients i
+  where r.id=i.id and r.Time_to_cook=30")
+
+  Recipes.find_by_sql(
+ "SELECT r.Name
+  from Recipes r
+  where exists ( select i.*
+                 from Ingredients i
+                 where i.id=r.id and i.ing1='rice')")
+
+    SELECT col FROM (
+   SELECT "Column_1" AS col, Column_1 AS value FROM Ingredients
+   UNION ALL SELECT "Column_2", Column_2 Ingredients
+   UNION ALL SELECT "Column_3", Column_3 FROM Ingredients
+) allValues
+WHERE value=8;
+
+ing=Recipes.find_by_sql("Select r.Name,r.Ingredients_needed from Recipes r")
+ingredients.each do |i|
+   ing.each do |j|
+     if j.Ingredients_needed.include? i
+         puts j.Name
+     end
+   end
+end
